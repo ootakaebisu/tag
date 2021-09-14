@@ -1,0 +1,18 @@
+<h1>Users#show</h1>
+
+<% if flash[:notice] %>
+  <%= notice %>
+<% end %>
+
+<%= render "newbook" , book: @newbook %>
+
+<% @books.each do |book| %>
+  <table>
+    <tbody>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
